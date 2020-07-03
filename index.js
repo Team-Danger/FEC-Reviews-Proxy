@@ -8,9 +8,9 @@ const options = {
   target: 'localhost',
   changeOrigin: true,
   router:{
-    'localhost:7357/api/description': 'http://localhost:3000',
-    'localhost:7357/api/reservation': 'http://localhost:3001',
-    'localhost:7357/api/reviews': 'http://localhost:3002'
+    'localhost:7357/api/description': 'mongo:3000',
+    'localhost:7357/api/reservation': 'mongo:3001',
+    'localhost:7357/api/reviews': 'mongo:3002'
   }
 }
 
