@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <header>
   <link rel="stylesheet" type="text/css" href="reservation/style.css">
+  <link rel='stylesheet' type='text/css' href='proxyStyles.css'
   <title>Airbnb Clone</title>
 </header>
 <body>
-  <div id='container'></div>
-  <div id="calendar-component"></div>
-  <div id="booking-component"></div>
-  <div id='reviews'></div>
+  <div class='containerSection'>
+    <div id='container'></div>
+  </div>
+  <div class='reservationSection'>
+    <div id="calendar-component"></div>
+    <div id="booking-component"></div>
+  </div>
+  <div class='reviewsSection'>
+    <div id='reviews'></div>
+  </div>
 
   <script src='/description/main.js'></script>
   <script src='/reservation/reservationBundle.js'></script>
