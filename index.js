@@ -24,7 +24,7 @@ const proxyOptions = {
 }
 
 const staticOptions = {
-  dotfiles: 'ignore'
+  dotfiles: 'ignore',
   maxAge: '1d',
   setHeaders: function (res) {
     res.set('content-encoding', 'gzip');
