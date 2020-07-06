@@ -26,9 +26,9 @@ const proxyOptions = {
 const staticOptions = {
   dotfiles: 'ignore',
   maxAge: '1d',
-  setHeaders: function (res) {
-    res.set('content-encoding', 'gzip');
-  }
+  // setHeaders: function (res) {
+  //   res.set('Content-Encoding', 'gzip');
+  // }
 }
 
 const proxy = createProxyMiddleware(proxyOptions);
