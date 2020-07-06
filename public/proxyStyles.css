@@ -1,18 +1,8 @@
 body {
-  display: flex
-}
-
-.containerSection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .reservationSection {
   display: flex;
-  flex-direction: row;
-}
-
-.reviewsSection {
-  display: flex;
-  flex-direction: row;
 }
