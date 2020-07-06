@@ -47,7 +47,7 @@ app.use('/api', proxy);
 app.use('/', express.static(proxyPath));
 app.use('/description', express.static(descriptionPath));
 app.use('/reviews', express.static(reviewPath));
-app.use('/reservation', express.static(reservationPath);
+app.use('/reservation', express.static(reservationPath));
 
 app.listen(PORT, () => {
   console.log(`listening on proxy server: ${PORT}`)
