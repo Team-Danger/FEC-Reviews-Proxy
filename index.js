@@ -24,7 +24,6 @@ const proxyOptions = {
 }
 
 const staticOptions = {
-  dotfiles: 'ignore',
   maxAge: '1d',
   // setHeaders: function (res) {
   //   res.set('Content-Encoding', 'gzip');
@@ -45,9 +44,9 @@ const reviewPath = path.join(__dirname, 'Reviews-Component');
 
 app.use('/api', proxy);
 app.use('/', express.static(proxyPath));
-app.use('/description', express.static(descriptionPath));
-app.use('/reviews', express.static(reviewPath));
-app.use('/reservation', express.static(reservationPath));
+app.use('/description', express.static(descriptionPath, staticOptions));
+app.use('/reviews', express.static(reviewPath, staticOptions));
+app.use('/reservation', express.static(reservationPath, staticOptions));
 
 app.listen(PORT, () => {
   console.log(`listening on proxy server: ${PORT}`)
