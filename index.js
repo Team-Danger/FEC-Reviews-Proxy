@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
+var compress = require('compression');
 
 const PORT = process.env.PORT || 80;
 
@@ -24,10 +25,7 @@ const proxyOptions = {
 }
 
 const staticOptions = {
-  maxAge: '1d',
-  // setHeaders: function (res) {
-  //   res.set('Content-Encoding', 'gzip');
-  // }
+  maxAge: '1d'
 }
 
 const proxy = createProxyMiddleware(proxyOptions);
@@ -41,7 +39,7 @@ const descriptionPath = path.join(__dirname, 'Description-Component');
 const reservationPath = path.join(__dirname, 'Reservation-Component');
 const reviewPath = path.join(__dirname, 'Reviews-Component');
 
-
+app.use(compress()); 
 app.use('/api', proxy);
 app.use('/', express.static(proxyPath));
 app.use('/description', express.static(descriptionPath, staticOptions));
