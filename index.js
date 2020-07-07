@@ -25,7 +25,7 @@ const proxyOptions = {
 }
 
 const staticOptions = {
-  maxAge: '1d'
+  maxAge: 31536000
 }
 
 const proxy = createProxyMiddleware(proxyOptions);
